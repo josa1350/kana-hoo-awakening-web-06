@@ -1,10 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import './KanaHoo.css';
+import AuthModal from '../components/AuthModal';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const quotes = [
     {
@@ -57,7 +58,11 @@ const Index = () => {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <h2>Kana Hoo</h2>
+            <img 
+              src="/lovable-uploads/a00cfd1d-1e80-41e6-b4d8-fb68aa017636.png" 
+              alt="Kana Hoo Logo" 
+              className="logo-image"
+            />
           </div>
           
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -70,7 +75,12 @@ const Index = () => {
           </div>
 
           <div className="nav-auth">
-            <button className="sign-in-btn">Sign In</button>
+            <button 
+              className="sign-in-btn"
+              onClick={() => setIsAuthModalOpen(true)}
+            >
+              Sign In
+            </button>
           </div>
 
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -89,8 +99,11 @@ const Index = () => {
               <div className="book-cover">
                 <div className="book-spine"></div>
                 <div className="book-front">
-                  <h3>Kana Hoo</h3>
-                  <p>Psychology Guide</p>
+                  <img 
+                    src="/lovable-uploads/a00cfd1d-1e80-41e6-b4d8-fb68aa017636.png" 
+                    alt="Kana Hoo Book Cover" 
+                    className="book-logo"
+                  />
                 </div>
               </div>
             </div>
@@ -322,6 +335,12 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Auth Modal */}
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)} 
+      />
     </div>
   );
 };

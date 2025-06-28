@@ -1,4 +1,3 @@
-
 /* Kana Hoo Enhanced Landing Page Styles */
 
 * {
@@ -779,6 +778,30 @@ body {
 .footer-bottom p {
   color: #95A5A6;
   font-size: 0.9rem;
+}
+
+/* Logo Styles */
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.book-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Auth Modal Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 35px;
+  }
+  
+  .book-logo {
+    width: 100px;
+  }
 }
 
 /* Mobile Responsiveness */

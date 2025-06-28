@@ -1,0 +1,145 @@
+
+.services-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.services {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #F8F9FA 0%, #E8F4F8 100%);
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2C3E50;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.service-item {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  margin-bottom: 32px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.service-header {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.service-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-jocode, .logo-study-buddy, .logo-mindset {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.service-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #2C3E50;
+  margin-bottom: 16px;
+}
+
+.service-info p {
+  color: #5D6D7E;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.service-info ul li {
+  color: #7F8C8D;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-info ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #27AE60;
+  font-weight: bold;
+}
+
+.service-cta {
+  align-self: flex-start;
+}
+
+.service-btn {
+  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
+}
+
+@media (max-width: 768px) {
+  .service-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .service-item {
+    padding: 24px 20px;
+  }
+
+  .services {
+    padding: 100px 0 60px;
+  }
+}

@@ -1,0 +1,87 @@
+
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  padding: 120px 0 80px;
+  background: #FFFFFF;
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2C3E50;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #5D6D7E;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.quote-block {
+  background: linear-gradient(135deg, #F8F9FA 0%, #E8F4F8 100%);
+  padding: 32px;
+  border-radius: 20px;
+  border-left: 4px solid #3498DB;
+}
+
+.quote-block blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #2C3E50;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.quote-block cite {
+  color: #7F8C8D;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.founder-message h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #2C3E50;
+  margin-bottom: 20px;
+}
+
+.founder-message p {
+  font-size: 1.1rem;
+  color: #5D6D7E;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about {
+    padding: 100px 0 60px;
+  }
+}

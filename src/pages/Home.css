@@ -15,7 +15,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.kana-landing {
+.home-page {
   overflow-x: hidden;
 }
 
@@ -23,103 +23,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* Navbar Styles */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-
-.nav-logo a {
-  font-family: 'Playfair Display', serif;
-  color: #2C3E50;
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #5D6D7E;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-link:hover {
-  color: #3498DB;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #3498DB;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.sign-in-btn {
-  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.sign-in-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
-}
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.nav-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #2C3E50;
-  transition: all 0.3s ease;
 }
 
 /* Hero Section Enhanced */
@@ -301,181 +204,6 @@ body {
   60% { transform: translateY(-5px); }
 }
 
-/* About Section Enhanced */
-.about {
-  padding: 100px 0;
-  background: #FFFFFF;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #2C3E50;
-  margin-bottom: 32px;
-  font-weight: 600;
-}
-
-.about-description {
-  font-size: 1.2rem;
-  color: #5D6D7E;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-
-.quote-block {
-  background: linear-gradient(135deg, #F8F9FA 0%, #E8F4F8 100%);
-  padding: 32px;
-  border-radius: 20px;
-  border-left: 4px solid #3498DB;
-}
-
-.quote-block blockquote {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  font-style: italic;
-  color: #2C3E50;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.quote-block cite {
-  color: #7F8C8D;
-  font-size: 1rem;
-  font-style: normal;
-}
-
-.founder-message h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #2C3E50;
-  margin-bottom: 20px;
-}
-
-.founder-message p {
-  font-size: 1.1rem;
-  color: #5D6D7E;
-  line-height: 1.7;
-}
-
-/* Services Section Enhanced */
-.services {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #F8F9FA 0%, #E8F4F8 100%);
-}
-
-.services h2 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  font-size: 2.5rem;
-  color: #2C3E50;
-  margin-bottom: 60px;
-  font-weight: 600;
-}
-
-.service-item {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  margin-bottom: 32px;
-  transition: all 0.3s ease;
-}
-
-.service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-}
-
-.service-header {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.service-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-jocode, .logo-study-buddy, .logo-mindset {
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
-}
-
-.service-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #2C3E50;
-  margin-bottom: 16px;
-}
-
-.service-info p {
-  color: #5D6D7E;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.service-info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.service-info ul li {
-  color: #7F8C8D;
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.service-info ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #27AE60;
-  font-weight: bold;
-}
-
-.service-cta {
-  text-align: center;
-}
-
-.service-btn {
-  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
-  color: white;
-  border: none;
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.service-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
-}
-
 /* Book Categories Section */
 .book-categories {
   padding: 100px 0;
@@ -605,232 +333,8 @@ body {
   to { opacity: 1; }
 }
 
-/* Why Join Section */
-.why-join {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #F8F9FA 0%, #E8F4F8 100%);
-}
-
-.why-join h2 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  font-size: 2.5rem;
-  color: #2C3E50;
-  margin-bottom: 60px;
-  font-weight: 600;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-  margin-bottom: 60px;
-}
-
-.benefit-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: white;
-  padding: 24px;
-  border-radius: 15px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.benefit-item:hover {
-  transform: translateY(-4px);
-}
-
-.benefit-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-.benefit-item p {
-  color: #2C3E50;
-  font-weight: 500;
-  margin: 0;
-}
-
-.join-cta {
-  text-align: center;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Newsletter Section Enhanced */
-.newsletter {
-  padding: 100px 0;
-  background: white;
-}
-
-.newsletter-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.newsletter h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #2C3E50;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.newsletter p {
-  font-size: 1.2rem;
-  color: #5D6D7E;
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 16px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.newsletter-form input {
-  flex: 1;
-  padding: 16px 20px;
-  border: 2px solid #E8F4F8;
-  border-radius: 50px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-}
-
-.newsletter-form input:focus {
-  border-color: #3498DB;
-}
-
-.submit-btn {
-  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
-  color: white;
-  border: none;
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
-}
-
-/* Footer Enhanced */
-.footer {
-  background: #2C3E50;
-  color: white;
-  padding: 60px 0 20px;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-section h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.footer-section p {
-  color: #BDC3C7;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.social-links {
-  display: flex;
-  gap: 16px;
-}
-
-.social-links a {
-  display: inline-block;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.social-links a:hover {
-  transform: scale(1.2);
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 12px;
-}
-
-.footer-section ul li a {
-  color: #BDC3C7;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #3498DB;
-}
-
-.footer-bottom {
-  border-top: 1px solid #34495E;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.footer-bottom p {
-  color: #95A5A6;
-  font-size: 0.9rem;
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: white;
-    flex-direction: column;
-    justify-content: start;
-    padding-top: 50px;
-    transition: left 0.3s ease;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
   .hero-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -854,18 +358,6 @@ body {
     height: 280px;
   }
 
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .service-header {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 24px;
-  }
-
   .hero-buttons {
     flex-direction: column;
     align-items: center;
@@ -876,21 +368,16 @@ body {
     max-width: 280px;
   }
   
-  .newsletter-form {
-    flex-direction: column;
-  }
-  
-  .submit-btn {
-    width: 100%;
-  }
-  
   .categories-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .join-cta {
-    flex-direction: column;
-    align-items: center;
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .book-categories, .quote-section {
+    padding: 60px 0;
   }
 }
 
@@ -906,21 +393,5 @@ body {
   .book-cover {
     width: 180px;
     height: 240px;
-  }
-  
-  .service-item {
-    padding: 24px 20px;
-  }
-
-  .nav-container {
-    padding: 0 16px;
-  }
-
-  .hero {
-    padding: 100px 0 60px;
-  }
-
-  .about, .services, .book-categories, .quote-section, .why-join, .newsletter {
-    padding: 60px 0;
   }
 }

@@ -1,11 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './KanaHoo.css';
-import AuthModal from '../components/AuthModal';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const quotes = [
     {
@@ -69,18 +69,15 @@ const Index = () => {
             <a href="#home" className="nav-link" onClick={() => scrollToSection('hero')}>Home</a>
             <a href="#about" className="nav-link" onClick={() => scrollToSection('about')}>About</a>
             <a href="#services" className="nav-link" onClick={() => scrollToSection('services')}>Services</a>
-            <a href="#books" className="nav-link" onClick={() => scrollToSection('books')}>Books</a>
-            <a href="#quote" className="nav-link" onClick={() => scrollToSection('quote-section')}>Quote</a>
+            <Link to="/books" className="nav-link">Books</Link>
+            <Link to="/quote" className="nav-link">Quote</Link>
             <a href="#join" className="nav-link" onClick={() => scrollToSection('join')}>Join</a>
           </div>
 
           <div className="nav-auth">
-            <button 
-              className="sign-in-btn"
-              onClick={() => setIsAuthModalOpen(true)}
-            >
+            <Link to="/login" className="sign-in-btn">
               Sign In
-            </button>
+            </Link>
           </div>
 
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -179,7 +176,7 @@ const Index = () => {
               </ul>
             </div>
             <div className="service-cta">
-              <button className="service-btn">Explore Jocode</button>
+              <Link to="/jocode" className="service-btn">Explore Jocode</Link>
             </div>
           </div>
 
@@ -197,7 +194,7 @@ const Index = () => {
               </ul>
             </div>
             <div className="service-cta">
-              <button className="service-btn">Explore Study Buddy</button>
+              <Link to="/study-buddy" className="service-btn">Explore Study Buddy</Link>
             </div>
           </div>
 
@@ -215,7 +212,7 @@ const Index = () => {
               </ul>
             </div>
             <div className="service-cta">
-              <button className="service-btn">Explore Mindset</button>
+              <Link to="/mindset" className="service-btn">Explore Mindset</Link>
             </div>
           </div>
         </div>
@@ -227,11 +224,15 @@ const Index = () => {
           <h2>Explore Our Book Categories</h2>
           <div className="categories-grid">
             {bookCategories.map((category, index) => (
-              <div key={index} className="category-card">
+              <Link 
+                key={index} 
+                to={`/books?category=${category.name.toLowerCase()}`}
+                className="category-card"
+              >
                 <div className="category-icon">{category.icon}</div>
                 <h3>{category.name}</h3>
                 <p>{category.count} books</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -256,6 +257,11 @@ const Index = () => {
               ))}
             </div>
           </div>
+          <div className="text-center mt-8">
+            <Link to="/quote" className="cta-button secondary">
+              View More Quotes
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -272,8 +278,8 @@ const Index = () => {
             ))}
           </div>
           <div className="join-cta">
-            <button className="cta-button primary">Join for Free</button>
-            <button className="cta-button secondary">Try a Product</button>
+            <Link to="/login" className="cta-button primary">Join for Free</Link>
+            <Link to="/login" className="cta-button secondary">Try a Product</Link>
           </div>
         </div>
       </section>
@@ -307,15 +313,15 @@ const Index = () => {
             <div className="footer-section">
               <h4>Products</h4>
               <ul>
-                <li><a href="#jocode">Jocode</a></li>
-                <li><a href="#study-buddy">Study Buddy</a></li>
-                <li><a href="#mindset">Mindset</a></li>
+                <li><Link to="/jocode">Jocode</Link></li>
+                <li><Link to="/study-buddy">Study Buddy</Link></li>
+                <li><Link to="/mindset">Mindset</Link></li>
               </ul>
             </div>
             <div className="footer-section">
               <h4>Resources</h4>
               <ul>
-                <li><a href="#books">Books</a></li>
+                <li><Link to="/books">Books</Link></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#support">Support</a></li>
@@ -335,12 +341,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      {/* Auth Modal */}
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)} 
-      />
     </div>
   );
 };

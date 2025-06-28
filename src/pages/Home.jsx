@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './KanaHoo.css';
+import './Home.css';
 
-const Index = () => {
+const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
@@ -40,7 +40,6 @@ const Index = () => {
     "Community access"
   ];
 
-  // Auto-rotate quotes
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentQuoteIndex((prev) => (prev + 1) % quotes.length);
@@ -58,11 +57,7 @@ const Index = () => {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <img 
-              src="/lovable-uploads/a00cfd1d-1e80-41e6-b4d8-fb68aa017636.png" 
-              alt="Kana Hoo Logo" 
-              className="logo-image"
-            />
+            <Link to="/">Kana Hoo</Link>
           </div>
           
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -96,11 +91,8 @@ const Index = () => {
               <div className="book-cover">
                 <div className="book-spine"></div>
                 <div className="book-front">
-                  <img 
-                    src="/lovable-uploads/a00cfd1d-1e80-41e6-b4d8-fb68aa017636.png" 
-                    alt="Kana Hoo Book Cover" 
-                    className="book-logo"
-                  />
+                  <h3>Kana Hoo</h3>
+                  <p>Psychology & Growth</p>
                 </div>
               </div>
             </div>
@@ -163,17 +155,19 @@ const Index = () => {
           <h2>Our Products & Services</h2>
           
           <div className="service-item">
-            <div className="service-logo">
-              <div className="logo-jocode">💻</div>
-            </div>
-            <div className="service-info">
-              <h3>Jocode</h3>
-              <p>Learn programming from scratch with real-world projects. Our platform offers both free and premium content with progress tracking and certification.</p>
-              <ul>
-                <li>Real projects and hands-on learning</li>
-                <li>Progress tracking and certification</li>
-                <li>Free & premium content</li>
-              </ul>
+            <div className="service-header">
+              <div className="service-logo">
+                <div className="logo-jocode">💻</div>
+              </div>
+              <div className="service-info">
+                <h3>Jocode</h3>
+                <p>Learn programming from scratch with real-world projects. Our platform offers both free and premium content with progress tracking and certification.</p>
+                <ul>
+                  <li>Real projects and hands-on learning</li>
+                  <li>Progress tracking and certification</li>
+                  <li>Free & premium content</li>
+                </ul>
+              </div>
             </div>
             <div className="service-cta">
               <Link to="/jocode" className="service-btn">Explore Jocode</Link>
@@ -181,17 +175,19 @@ const Index = () => {
           </div>
 
           <div className="service-item">
-            <div className="service-logo">
-              <div className="logo-study-buddy">📚</div>
-            </div>
-            <div className="service-info">
-              <h3>Study Buddy</h3>
-              <p>Hire verified tutors and monitor student progress. Perfect for parents, teachers, and learners with videos, tests, and assignments.</p>
-              <ul>
-                <li>Verified tutors and mentors</li>
-                <li>Progress monitoring tools</li>
-                <li>Interactive learning materials</li>
-              </ul>
+            <div className="service-header">
+              <div className="service-logo">
+                <div className="logo-study-buddy">📚</div>
+              </div>
+              <div className="service-info">
+                <h3>Study Buddy</h3>
+                <p>Hire verified tutors and monitor student progress. Perfect for parents, teachers, and learners with videos, tests, and assignments.</p>
+                <ul>
+                  <li>Verified tutors and mentors</li>
+                  <li>Progress monitoring tools</li>
+                  <li>Interactive learning materials</li>
+                </ul>
+              </div>
             </div>
             <div className="service-cta">
               <Link to="/study-buddy" className="service-btn">Explore Study Buddy</Link>
@@ -199,17 +195,19 @@ const Index = () => {
           </div>
 
           <div className="service-item">
-            <div className="service-logo">
-              <div className="logo-mindset">🧠</div>
-            </div>
-            <div className="service-info">
-              <h3>Mindset</h3>
-              <p>Daily quotes, videos, and books designed to support personal transformation. Rooted in psychology and growth principles.</p>
-              <ul>
-                <li>Daily inspiration and motivation</li>
-                <li>Psychology-based content</li>
-                <li>Personal transformation tools</li>
-              </ul>
+            <div className="service-header">
+              <div className="service-logo">
+                <div className="logo-mindset">🧠</div>
+              </div>
+              <div className="service-info">
+                <h3>Mindset</h3>
+                <p>Daily quotes, videos, and books designed to support personal transformation. Rooted in psychology and growth principles.</p>
+                <ul>
+                  <li>Daily inspiration and motivation</li>
+                  <li>Psychology-based content</li>
+                  <li>Personal transformation tools</li>
+                </ul>
+              </div>
             </div>
             <div className="service-cta">
               <Link to="/mindset" className="service-btn">Explore Mindset</Link>
@@ -345,4 +343,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;
